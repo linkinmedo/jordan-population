@@ -1,0 +1,24 @@
+body {
+  background-color: #001f3f;
+  color: white;
+}
+body header {
+  text-align: center;
+  padding: 20px 0;
+}
+body button {
+  background: transparent;
+  border: 1px solid white;
+  padding: 15px 30px;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: all 500ms;
+  cursor: pointer;
+}
+body button:hover {
+  background: white;
+  color: black;
+}
+
+/*# sourceMappingURL=/style.97fcb138.css.map */
