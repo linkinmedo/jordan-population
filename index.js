@@ -1,5 +1,5 @@
 import * as d3 from "d3";
-import { rollup } from 'd3-array';
+import { rollup, groups } from 'd3-array';
 import hello from "./data";
 
 const duration = 250;
@@ -49,7 +49,7 @@ const genKeyframes = () => {
 }
 
 const keyframes = genKeyframes();
-const nameframes = d3.groups(keyframes.flatMap(([, data]) => data), d => d.name);
+const nameframes = groups(keyframes.flatMap(([, data]) => data), d => d.name);
 const prev = new Map(nameframes.flatMap(([, data]) => d3.pairs(data, (a, b) => [b, a])));
 const next = new Map(nameframes.flatMap(([, data]) => d3.pairs(data)));
 
